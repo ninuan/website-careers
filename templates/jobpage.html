@@ -4,24 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{job[0].title}} - ninuan</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <title>ninuan</title>
-  
 </head>
 <body>
   {% include 'nav.html' %}
-  {% include 'banner.html' %}
-  <div class="container">
-    <h1 class="text-center">hello,i'm a student.</h1>
-    <div>
-      {% for job in jobs %}
-        {% include 'jobitem.html' %}
-      {% endfor %}
-    </div>
-    <div class="mx-auto" style="width: 200px;">
-      <a href='mailto:ninuan123@gmail.com?subject=contant us' class="btn btn-primary" type="button">contant us</a>
-    </div>
-  </div>
+  <h3>Title</h1>
+  <p>{{job[0].title}}</p>
+  <h3>Location</h3>
+  <p>{{job[0].location}}</p>
+  <h3>Salary</h3>
+  <p>{{job[0].currency}}{{job[0].salary}}</p>
+  <h3>Responsibities</h3>
+  <p>{{job[0].responsibities}}</p>
+  <h3>Requirements</h3>
+  <p>{{job[0].requirements}}</p>
+
   {% include 'footer.html' %}
-</body> 
+</body>
 </html>
